@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: northwind
+    database: postgres
+    schema: public
+    loaded_at_field: _loaded_at_etl # configure for all sources
+
+    tables:
+      - name: customers
