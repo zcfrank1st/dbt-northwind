@@ -1,10 +1,194 @@
 version: 2
 
 sources:
-  - name: northwind
-    database: postgres
-    schema: public
-    loaded_at_field: _loaded_at_etl # configure for all sources
-
+  - name: public
     tables:
       - name: customers
+        columns:
+          - name: customer_id
+            description: ""
+          - name: company_name
+            description: ""
+          - name: contact_name
+            description: ""
+          - name: contact_title
+            description: ""
+          - name: address
+            description: ""
+          - name: city
+            description: ""
+          - name: region
+            description: ""
+          - name: postal_code
+            description: ""
+          - name: country
+            description: ""
+          - name: phone
+            description: ""
+          - name: fax
+            description: ""
+
+      - name: employee_territories
+        columns:
+          - name: employee_id
+            description: ""
+          - name: territory_id
+            description: ""
+
+      - name: employees
+        columns:
+          - name: employee_id
+            description: ""
+          - name: last_name
+            description: ""
+          - name: first_name
+            description: ""
+          - name: title
+            description: ""
+          - name: title_of_courtesy
+            description: ""
+          - name: birth_date
+            description: ""
+          - name: hire_date
+            description: ""
+          - name: address
+            description: ""
+          - name: city
+            description: ""
+          - name: region
+            description: ""
+          - name: postal_code
+            description: ""
+          - name: country
+            description: ""
+          - name: home_phone
+            description: ""
+          - name: extention
+            description: ""
+          - name: notes
+            description: ""
+          - name: reports_to
+            description: ""
+          - name: photo_path
+            description: ""
+          - name: salary
+            description: ""
+
+      - name: order_details
+        columns:
+          - name: order_id
+            description: ""
+          - name: product_id
+            description: ""
+          - name: unit_price
+            description: ""
+          - name: quantity
+            description: ""
+          - name: discount
+            description: ""
+
+      - name: orders
+        columns:
+          - name: order_id
+            description: ""
+          - name: customer_id
+            description: ""
+          - name: order_date
+            description: ""
+          - name: required_date
+            description: ""
+          - name: shipped_date
+            description: ""
+          - name: ship_via
+            description: ""
+          - name: freight
+            description: ""
+          - name: ship_name
+            description: ""
+          - name: ship_address
+            description: ""
+          - name: ship_city
+            description: ""
+          - name: ship_region
+            description: ""
+          - name: ship_postal_code
+            description: ""
+          - name: ship_country
+            description: ""
+          - name: employee_id
+            description: ""
+
+      - name: products
+        columns:
+          - name: product_id
+            description: ""
+          - name: product_name
+            description: ""
+          - name: supplier_id
+            description: ""
+          - name: category_id
+            description: ""
+          - name: quantity_per_unit
+            description: ""
+          - name: unit_price
+            description: ""
+          - name: units_in_stock
+            description: ""
+          - name: units_on_order
+            description: ""
+          - name: reorder_level
+            description: ""
+          - name: discontinued
+            description: ""
+
+      - name: region
+        columns:
+          - name: region_id
+            description: ""
+          - name: region_description
+            description: ""
+
+      - name: shippers
+        columns:
+          - name: shipper_id
+            description: ""
+          - name: company_name
+            description: ""
+          - name: phone
+            description: ""
+
+      - name: suppliers
+        columns:
+          - name: supplier_id
+            description: ""
+          - name: company_name
+            description: ""
+          - name: contact_name
+            description: ""
+          - name: contact_title
+            description: ""
+          - name: address
+            description: ""
+          - name: city
+            description: ""
+          - name: region
+            description: ""
+          - name: postal_code
+            description: ""
+          - name: country
+            description: ""
+          - name: phone
+            description: ""
+          - name: fax
+            description: ""
+          - name: home_page
+            description: ""
+
+      - name: territories
+        columns:
+          - name: territory_id
+            description: ""
+          - name: territory_description
+            description: ""
+          - name: region_id
+            description: ""
