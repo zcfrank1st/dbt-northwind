@@ -1,7 +1,3 @@
-{{ codegen.generate_model_yaml(
-    model_name='v_stg_customers'
-) }}
-
 with source_customers as (
     select * from {{ source('public', 'customers') }}
 ),
@@ -19,7 +15,11 @@ v_stg_customers as (
         postal_code,
         country,
         phone,
-        fax
+        fax,
+        'CUSTOMERS' as source,
+        now() as load_datetime,
+        current_date as start_date,
+        to_date('9999-12-31','yyyy-MM-dd') as end_date
 
     from source_customers
 
