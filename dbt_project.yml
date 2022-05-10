@@ -37,12 +37,12 @@ models:
     stage:
       +schema: stg
       +materialized: view
-    raw_vault:
+    rawvault:
       +schema: rv
       +materialized: table
-    business_vault:
+    bizvault:
       +schema: bv
       +materialized: table
-    information_mart:
+    infomart:
       +schema: im
       +materialized: table
